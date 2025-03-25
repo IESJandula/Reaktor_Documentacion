@@ -2,15 +2,31 @@
 
 Si estás aquí es porque quieres lanzar una serie de proyectos Reaktor o quieres adaptar tu proyecto Spring Boot al formato Reaktor.
 
-En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor](#lanzando-reaktor-en-tu-máquina-local). Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. De esta forma, tenemos los siguientes apartados:
+En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor en tu entorno local](#lanzando-reaktor-en-tu-máquina-local). Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. De esta forma, tenemos los siguientes apartados:
 
-- [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse)
-- [Proyectos necesarios para importar](#proyectos-necesarios-para-importar)
-- [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-applicationyaml)
-- [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase-y-lanzar-la-web-somosjandula)
-- [Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer](#creación-de-usuarios-en-la-bbdd-de-nuestro-microservicio-firebaseserver)
+- [Proyectos necesarios para importar](#proyectos-necesarios-para-importar): verás los proyectos necesarios para poder arrancar el entorno Reaktor.
+- [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse): te explicaré cómo importar los proyectos en Eclipse y cómo realizar el proceso de compilación.
+- [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-applicationyaml): entenderás el fichero de configuración y las propiedades específicas de Reaktor.
+- [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase-y-lanzar-la-web-somosjandula): aprenderás a configurar Google Firebase ya que aquí es donde se realizará el proceso de autenticación.
+- [Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer](#creación-de-usuarios-en-la-bbdd-de-nuestro-microservicio-firebaseserver): será necesario que crees al menos un usuario con tu correo electrónico y con los roles pertinentes para poder acceder a la aplicación.
 
 ## Lanzando Reaktor en tu máquina local
+
+### Proyectos necesarios para importar
+
+Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a trabajar con otros microservicios:
+
+- [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/)
+
+- [Base](https://github.com/IESJandula/Reaktor_Base/)
+
+- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/)
+
+- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/)
+
+- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
+  
+- [Somos Jándula](https://github.com/IESJandula/somosjandula/)
 
 ### Importación y compilación en Eclipse
 
@@ -41,20 +57,6 @@ Así aparece si sale bien:
 ![Importar proyecto en Eclipse](imgs/maven_build-Eclipse-3.png)
 
 **Importante**: Hay que tener en cuenta el orden a la hora de instalar estos módulos ya que alguno puede depender de que otro esté ya instalado anteriormente
-
-### Proyectos necesarios para importar
-
-Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a trabajar con otros microservicios:
-
-- [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/)
-
-- [Base](https://github.com/IESJandula/Reaktor_Base/)
-
-- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/)
-
-- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/)
-
-- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
 
 ### Fichero de configuración application.yaml
 
