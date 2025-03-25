@@ -1,10 +1,16 @@
-## Reaktorización de un proyecto Spring Boot
+# Reaktorización de un proyecto Spring Boot
 
 Si estás aquí es porque quieres lanzar una serie de proyectos Reaktor o quieres adaptar tu proyecto Spring Boot al formato Reaktor.
 
-En esta guía vamos a comenzar aprendiendo cómo arrancar un proyecto Reaktor. Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. De esta forma, tenemos los siguientes apartados:
+En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor](#lanzando-reaktor-en-tu-máquina-local). Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. De esta forma, tenemos los siguientes apartados:
 
 - [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse)
+- [Proyectos necesarios para importar](#proyectos-necesarios-para-importar)
+- [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-application.yaml)
+- [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase-y-lanzar-la-web-somosjandula)
+- [Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer](#creación-de-usuarios-en-la-bbdd-de-nuestro-microservicio-firebaseserver)
+
+## Lanzando Reaktor en tu máquina local
 
 ### Importación y compilación en Eclipse
 
@@ -112,7 +118,7 @@ A continuación, en la raíz del proyecto web [Somos Jándula](https://github.co
 
 Para lanzar el proyecto web anterior, necesitamos instalar node.js, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
 
-## Creación de usuarios
+## Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer
 
 Para que el sistema funcione correctamente, es necesario tantos usuarios como personas quieras que accedan a la aplicación. Normalmente, en entorno local solo te bastará con añadir una fila con tu usuario. Para ello, necesitarás hacer un INSERT en la tabla usuario con tu correo electrónico, tu nombre y apellidos, y los roles que quieras tener. En cuanto a los roles, para poder visualizar todas las opciones de la aplicación, se aconseja que el valor sea `PROFESOR,DIRECCION,ADMINISTRADOR`
 
