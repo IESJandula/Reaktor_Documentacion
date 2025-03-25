@@ -5,9 +5,13 @@ Si estás aquí es porque quieres lanzar una serie de proyectos Reaktor o quiere
 En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor en tu entorno local](#lanzando-reaktor-en-tu-máquina-local). Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. De esta forma, tenemos los siguientes apartados:
 
 - [Proyectos necesarios para importar](#proyectos-necesarios-para-importar): verás los proyectos necesarios para poder arrancar el entorno Reaktor.
+  
 - [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse): te explicaré cómo importar los proyectos en Eclipse y cómo realizar el proceso de compilación.
+  
 - [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-applicationyaml): entenderás el fichero de configuración y las propiedades específicas de Reaktor.
+  
 - [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase-y-lanzar-la-web-somosjandula): aprenderás a configurar Google Firebase ya que aquí es donde se realizará el proceso de autenticación.
+  
 - [Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer](#creación-de-usuarios-en-la-bbdd-de-nuestro-microservicio-firebaseserver): será necesario que crees al menos un usuario con tu correo electrónico y con los roles pertinentes para poder acceder a la aplicación.
 
 ## Lanzando Reaktor en tu máquina local
