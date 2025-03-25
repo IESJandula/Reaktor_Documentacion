@@ -1,4 +1,4 @@
-# Reaktorización de un proyecto Spring Boot
+# ¡Trabajemos con proyectos Reaktor!
 
 Si estás aquí es porque quieres lanzar una serie de proyectos Reaktor o quieres adaptar tu proyecto Spring Boot al formato Reaktor.
 
