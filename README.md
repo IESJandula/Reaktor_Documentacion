@@ -6,7 +6,7 @@ En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor](
 
 - [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse)
 - [Proyectos necesarios para importar](#proyectos-necesarios-para-importar)
-- [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-application.yaml)
+- [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-application-yaml)
 - [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase-y-lanzar-la-web-somosjandula)
 - [Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer](#creación-de-usuarios-en-la-bbdd-de-nuestro-microservicio-firebaseserver)
 
