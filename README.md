@@ -1,5 +1,11 @@
 ## Reaktorización de un proyecto Spring Boot
 
+Si estás aquí es porque quieres lanzar una serie de proyectos Reaktor o quieres adaptar tu proyecto Spring Boot al formato Reaktor.
+
+En esta guía vamos a comenzar aprendiendo cómo arrancar un proyecto Reaktor. Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. De esta forma, tenemos los siguientes apartados:
+
+- [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse)
+
 ### Importación y compilación en Eclipse
 
 A la hora de crear un nuevo proyecto o adaptar uno ya existente para su uso con Reaktor se deben tener en cuenta una serie de proyectos maven que hacen la vez de módulos necesarios para su correcto funcionamiento, ya que cada uno de ellos implementa configuraciones o dependencias necesarias.
