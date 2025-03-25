@@ -16,17 +16,19 @@ En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor e
 
 ## Lanzando Reaktor en tu máquina local
 
+En esta sección iremos paso a paso configurando tu entorno local para que puedas desplegar todo el sistema Reaktor en tu máquina.
+
 ### Proyectos necesarios para importar
 
 Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a trabajar con otros microservicios:
 
-- [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/)
+- [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/): contiene todas las dependencias de los proyectos Reaktor. Realmente, es un pom.xml con todas las librerías básicas, no tiene código Java.
 
-- [Base](https://github.com/IESJandula/Reaktor_Base/)
+- [Base](https://github.com/IESJandula/Reaktor_Base/): contiene funcionalidades de reinicio automático, entre otras utilidades interesantes.
 
-- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/)
+- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/): posee funcionalidades de seguridad y todas aquellas dependencias comunes a cualquier servidor Spring Boot.
 
-- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/)
+- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/): posee funcionalidades de para la petición de JWTs al microservicio Firebase y todas aquellas dependencias comunes a cualquier servidor Spring Boot.
 
 - [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
   
