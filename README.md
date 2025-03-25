@@ -1,9 +1,3 @@
-## Creación de usuarios
-
-Para que el sistema funcione correctamente, es necesario tantos usuarios como personas quieras que accedan a la aplicación. Normalmente, en entorno local solo te bastará con añadir una fila con tu usuario. Para ello, necesitarás hacer un INSERT en la tabla usuario con tu correo electrónico, tu nombre y apellidos, y los roles que quieras tener. En cuanto a los roles, para poder visualizar todas las opciones de la aplicación, se aconseja que el valor sea `PROFESOR,DIRECCION,ADMINISTRADOR`
-
-Repite este paso para cada usuario que necesites agregar al sistema.
-
 ## Reaktorización de un proyecto Spring Boot
 
 ### Importación y compilación en Eclipse
@@ -111,6 +105,12 @@ A continuación, en la raíz del proyecto web [Somos Jándula](https://github.co
 ![configurar somosjandula - 1](imgs/configurar_somosjandula-1.png)
 
 Para lanzar el proyecto web anterior, necesitamos instalar node.js, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
+
+## Creación de usuarios
+
+Para que el sistema funcione correctamente, es necesario tantos usuarios como personas quieras que accedan a la aplicación. Normalmente, en entorno local solo te bastará con añadir una fila con tu usuario. Para ello, necesitarás hacer un INSERT en la tabla usuario con tu correo electrónico, tu nombre y apellidos, y los roles que quieras tener. En cuanto a los roles, para poder visualizar todas las opciones de la aplicación, se aconseja que el valor sea `PROFESOR,DIRECCION,ADMINISTRADOR`
+
+Repite este paso para cada usuario que necesites agregar al sistema.
 
 ### Anotación necesaria para el arranque de nuestro microservicio
 
