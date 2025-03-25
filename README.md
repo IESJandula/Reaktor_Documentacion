@@ -14,25 +14,25 @@ Dependiendo del IDE la manera de incluirlos en el proyecto final es ligeramente 
 
 En `eclipse` necesitamos los proyectos dentro del workspace común de nuestro proyecto a adaptar o crear. Para ello los incluimos importándolos como proyecto maven:
 
-![Importar proyecto en Eclipse](imgs/importar proyecto - Eclipse - 1.png)
+![Importar proyecto en Eclipse](imgs/importar_proyecto-Eclipse-1.png)
 
-![Importar proyecto en Eclipse](imgs/importar proyecto - Eclipse - 2.png)
+![Importar proyecto en Eclipse](imgs/importar_proyecto-Eclipse-2.png)
 
-![Importar proyecto en Eclipse](imgs/importar proyecto - Eclipse - 3.png)
+![Importar proyecto en Eclipse](imgs/importar_proyecto-Eclipse-3.png)
 
 En browse elegimos la carpeta raíz del proyecto maven a importar y hacemos click en finish cuando veamos que detecta el POM.
 
 Una vez lo tenemos importado es importante hacerle un clean install, para ello hacemos click derecho y venimos aquí:
 
-![Importar proyecto en Eclipse](imgs/maven build - Eclipse - 1.png)
+![Importar proyecto en Eclipse](imgs/maven_build-Eclipse-1.png)
 
 En maven build, en goals, escribimos clean install y ejecutamos:
 
-![Importar proyecto en Eclipse](imgs/maven build - Eclipse - 2.png)
+![Importar proyecto en Eclipse](imgs/maven_build-Eclipse-2.png)
 
 Así aparece si sale bien:
 
-![Importar proyecto en Eclipse](imgs/maven build - Eclipse - 3.png)
+![Importar proyecto en Eclipse](imgs/maven_build-Eclipse-3.png)
 
 **Importante**: Hay que tener en cuenta el orden a la hora de instalar estos módulos ya que alguno puede depender de que otro esté ya instalado anteriormente
 
@@ -87,28 +87,28 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 1. Entramos a la [Consola de firebase](https://console.firebase.google.com/)
 
-![configurar Google Firebase - 1](imgs/configurar Google Firebase - 1.png)
+![configurar Google Firebase - 1](imgs/configurar_Google_Firebase-1.png)
 
 2. Elegimos un nombre y damos a continuar hasta el final (google analytics no es necesario) para crear el proyecto..
 
-![configurar Google Firebase - 2](imgs/configurar Google Firebase - 2.png)
+![configurar Google Firebase - 2](imgs/configurar_Google_Firebase-2.png)
 
 3. Una vez creado elegimos utilizar firebase en nuestra aplicación web desde este botón:
 
 
-![configurar Google Firebase - 3](imgs/configurar Google Firebase - 3.png)
+![configurar Google Firebase - 3](imgs/configurar_Google_Firebase-3.png)
 
 4. Elegimos nombre y registramos
 
-![configurar Google Firebase - 4](imgs/configurar Google Firebase - 4.png)
+![configurar Google Firebase - 4](imgs/configurar_Google_Firebase-4.png)
 
 5. Esto nos genera el siguiente bloque de código
 
-![configurar Google Firebase - 5](imgs/configurar Google Firebase - 5.png)
+![configurar Google Firebase - 5](imgs/configurar_Google_Firebase-5.png)
 
 A continuación, en la raíz del proyecto web [Somos Jándula](https://github.com/IESJandula/somosjandula/) nos creamos el archivo de entorno ``.env`` y utilizamos los datos que nos ha generado para rellenar cada uno de los campos, aquí hay un ejemplo de cómo es:
 
-![configurar somosjandula - 1](imgs/configurar somosjandula - 1.png)
+![configurar somosjandula - 1](imgs/configurar_somosjandula-1.png)
 
 Para lanzar el proyecto web anterior, necesitamos instalar node.js, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
 
