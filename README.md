@@ -61,11 +61,11 @@ Todos los proyectos necesarios anteriores han de importarse en tu entorno de pro
 
 En browse anterior elegimos la carpeta raíz de cada proyecto ``maven`` a importar y hacemos clic en finish cuando veamos que detecta el POM. Una vez lo tenemos importado es importante hacerle un clean install, para ello hacemos click derecho y venimos aquí:
 
-<img src="imgs/maven_build-Eclipse-1.png" width="50%" heigth="50%" alt="Importar proyecto en Eclipse">
+<img src="imgs/maven_build-Eclipse-1.png" width="30%" heigth="30%" alt="Importar proyecto en Eclipse">
 
 En ``maven build``, en goals, escribimos ``clean install`` y ejecutamos:
 
-<img src="imgs/maven_build-Eclipse-2.png" width="50%" heigth="50%" alt="Importar proyecto en Eclipse">
+<img src="imgs/maven_build-Eclipse-2.png" width="30%" heigth="30%" alt="Importar proyecto en Eclipse">
 
 Así aparece si sale bien:
 
