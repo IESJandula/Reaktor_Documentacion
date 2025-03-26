@@ -59,19 +59,17 @@ Todos los proyectos necesarios anteriores han de importarse en tu entorno de pro
 
 <img src="imgs/importar_proyecto-Eclipse-3.png" width="50%" heigth="50%" alt="Importar proyecto en Eclipse">
 
-En browse elegimos la carpeta raíz del proyecto maven a importar y hacemos click en finish cuando veamos que detecta el POM.
+En browse anterior elegimos la carpeta raíz de cada proyecto ``maven`` a importar y hacemos clic en finish cuando veamos que detecta el POM. Una vez lo tenemos importado es importante hacerle un clean install, para ello hacemos click derecho y venimos aquí:
 
-Una vez lo tenemos importado es importante hacerle un clean install, para ello hacemos click derecho y venimos aquí:
+<img src="imgs/maven_build-Eclipse-1.png" width="50%" heigth="50%" alt="Importar proyecto en Eclipse">
 
-![Importar proyecto en Eclipse](imgs/maven_build-Eclipse-1.png)
+En ``maven build``, en goals, escribimos ``clean install`` y ejecutamos:
 
-En maven build, en goals, escribimos clean install y ejecutamos:
-
-![Importar proyecto en Eclipse](imgs/maven_build-Eclipse-2.png)
+<img src="imgs/maven_build-Eclipse-2.png" width="50%" heigth="50%" alt="Importar proyecto en Eclipse">
 
 Así aparece si sale bien:
 
-![Importar proyecto en Eclipse](imgs/maven_build-Eclipse-3.png)
+<img src="imgs/maven_build-Eclipse-3.png" width="50%" heigth="50%" alt="Importar proyecto en Eclipse">
 
 **Importante**: Hay que tener en cuenta el orden a la hora de instalar estos módulos ya que alguno puede depender de que otro esté ya instalado anteriormente
 
