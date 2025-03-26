@@ -24,21 +24,21 @@ En esta sección iremos paso a paso configurando tu entorno local para que pueda
 
 Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a trabajar con otros microservicios:
 
-- [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/): contiene todas las dependencias de los proyectos Reaktor. Realmente, es un pom.xml con todas las librerías básicas, no tiene código Java.
+- [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/): contiene todas las dependencias de los proyectos Reaktor. Realmente, es un pom.xml con todas las librerías básicas, no tiene código Java. Luego, no tendrás que arrancarla ya que es una simple librería.
 
-- [Base](https://github.com/IESJandula/Reaktor_Base/): contiene funcionalidades de reinicio automático, entre otras utilidades interesantes que son comunes a cualquier proyecto Reaktor, ya sea cliente o servidor.
+- [Base](https://github.com/IESJandula/Reaktor_Base/): contiene funcionalidades de reinicio automático, entre otras utilidades interesantes que son comunes a cualquier proyecto Reaktor, ya sea cliente o servidor. No tendrás que arrancarla ya que es una simple librería.
 
-- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/): posee funcionalidades de seguridad y todas aquellas dependencias comunes a cualquier servidor Spring Boot. Cabe destacar, que la mayoría de los proyectos son servidores, ya que ofrecen recursos a los que insertar, actualizar, consultar y borrar.
+- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/): posee funcionalidades de seguridad y todas aquellas dependencias comunes a cualquier servidor Spring Boot. Cabe destacar, que la mayoría de los proyectos son servidores, ya que ofrecen recursos a los que insertar, actualizar, consultar y borrar. No tendrás que arrancarla ya que es una simple librería.
 
-- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/): posee funcionalidades de para la petición de JWTs al microservicio Firebase y todas aquellas dependencias comunes a cualquier servidor Spring Boot. Destacamos aquí que existen proyectos que son clientes puros como el [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) que realizan llamadas a servidores para informar o recibir información de estos. Por otro lado, también existen servidores que a su vez son clientes, por ejemplo, el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer) ya que preguntan cierta información a otro servidor, en este caso a [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
+- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/): posee funcionalidades de para la petición de JWTs al microservicio Firebase y todas aquellas dependencias comunes a cualquier servidor Spring Boot. Destacamos aquí que existen proyectos que son clientes puros como el [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) que realizan llamadas a servidores para informar o recibir información de estos. Por otro lado, también existen servidores que a su vez son clientes, por ejemplo, el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer) ya que preguntan cierta información a otro servidor, en este caso a [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/). Cabe destacar que no tendrás que arrancarla ya que es una simple librería.
 
-- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/): es el microservicio que puede recibir peticiones de clientes como la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/), clientes como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) o como servidores tales como el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer). ``FirebaseServer`` se encarga de validar el JWT generado por Google Firebase para generar otro JWT propio de Reaktor que contiene el email, nombre y apellidos, y roles de la persona que se ha logueado a través de [Somos Jándula](https://github.com/IESJandula/somosjandula/). Para las aplicaciones cliente (que no son personas) como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) también le asigna un JWT propio pero que en lugar de un email, nombre y apellidos, posee un identificador de aplicación. Por último ``FirebaseServer`` ofrece la posibilidad de consultar datos de los usuarios del sistema entre otro de sus endpoints, siendo útil para el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer), entre otros.
+- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/): es el microservicio que puede recibir peticiones de clientes como la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/), clientes como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) o como servidores tales como el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer). ``FirebaseServer`` se encarga de validar el JWT generado por Google Firebase para generar otro JWT propio de Reaktor que contiene el email, nombre y apellidos, y roles de la persona que se ha logueado a través de [Somos Jándula](https://github.com/IESJandula/somosjandula/). Para las aplicaciones cliente (que no son personas) como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) también le asigna un JWT propio pero que en lugar de un email, nombre y apellidos, posee un identificador de aplicación. Por último ``FirebaseServer`` ofrece la posibilidad de consultar datos de los usuarios del sistema entre otro de sus endpoints, siendo útil para el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer), entre otros. Cabe destacar que al ser un microservicio, deberás arrancarlo para que reciba peticiones de autenticación.
   
 - [Somos Jándula](https://github.com/IESJandula/somosjandula/): es la web con la que se accede mediante el navegador a la plataforma. Necesitarás Node.js instalado. Más abajo existe una sección donde se explica cómo arrancarlo.
   
 - Y ahora llega el momento...¿qué microservicio adicional quieres lanzar? Actualmente tenemos varios:
   
-    - [Servidor de impresión remota](https://github.com/IESJandula/Reaktor_PrintersServer): recibe peticiones de impresión de usuarios desde la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/) y las deja pendientes hasta que las recoge el [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/). Luego, tendrías que importar tanto el cliente como el servidor, junto con la web
+    - [Servidor de impresión remota](https://github.com/IESJandula/Reaktor_PrintersServer): recibe peticiones de impresión de usuarios desde la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/) y las deja pendientes hasta que las recoge el [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/). Luego, tendrías que importar tanto el cliente como el servidor, junto con la web.
       
     - [Servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer): recibe peticiones de reservas de recursos de usuarios ya sean fijas o temporales desde la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/). Luego, tendrías que importar el servidor y la web.
       
@@ -83,7 +83,9 @@ Así aparece si sale bien:
 
 ### Fichero de configuración application.yaml
 
-Llegados a este punto, es importante que conozcáis los ficheros de configuración antes de arrancar la aplicación, ya que sin una configuración correcta no vais a poder arrancar los clientes y servidores. Antes de nada descarga e instala la versión Community de MySQL(https://dev.mysql.com/downloads/windows/installer/8.0.html), ya que los servidores almacenan información en BBDD. Una vez hecho esto, vamos a ver una serie de propiedades interesantes que posee el fichero ``application.yaml`` (puede tener más en función del proyecto, pero estas son las más interesantes):
+Llegados a este punto, es importante que conozcáis los ficheros de configuración antes de arrancar la aplicación, ya que sin una configuración correcta no vais a poder arrancar los clientes y servidores. Antes de nada descarga e instala la versión Community de MySQL(https://dev.mysql.com/downloads/windows/installer/8.0.html), ya que los servidores almacenan información en BBDD. Recuerda también ponerle al usuario de ``root`` la contraseña ``toor`` ya que es la que tienen por defecto todos los ``application.yaml`` (¡sino vas a tener que modificar uno a uno los ficheros de los proyectos!).
+
+Una vez hecho esto, vamos a ver una serie de propiedades interesantes que posee el fichero ``application.yaml`` (puede tener más en función del proyecto, pero estas son las más interesantes):
 
 ```
 reaktor:
@@ -145,7 +147,21 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 ### Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer
 
-Para que el sistema funcione correctamente, es necesario tantos usuarios como personas quieras que accedan a la aplicación. Normalmente, en entorno local solo te bastará con añadir una fila con tu usuario. Para ello, necesitarás hacer un INSERT en la tabla usuario con tu correo electrónico, tu nombre y apellidos, y los roles que quieras tener. En cuanto a los roles, para poder visualizar todas las opciones de la aplicación, se aconseja que el valor sea `PROFESOR,DIRECCION,ADMINISTRADOR`
+Antes de arrancar los servidores y clientes, para que el sistema funcione correctamente, es necesario dar de alta los usuarios que quieras que accedan a la aplicación. Normalmente, en entorno local solo te bastará añadir a tu usuario. Para ello, necesitarás realizar los siguientes pasos:
+
+1. Acceder a la BBDD llamada ``reaktor_firebaseserver``:
+
+```
+use reaktor_firebaseserver
+```
+
+2. Hacer un ``INSERT`` en la tabla ``usuario`` con tu correo electrónico personal de Google (ya que la junta tiene capado el acceso a las APIs de Google Firebase):
+
+```
+INSERT INTO usuario VALUES ('mi_email_personal@gmail.com', 'Francisco Manuel', 'Benítez Chico', 'PROFESOR,DIRECCION,ADMINISTRADOR') ;
+```
+
+Si te fijas, el primer campo es el email, el segundo tu nombre, el tercero tus apellidos y el último el conjunto de roles que posees. Es importante que te pongas todos los roles para ver todas las opciones de la aplicación. Si en algún momento quieres ver la aplicación con un role por defecto, deja solo el de ``PROFESOR``.
 
 Repite este paso para cada usuario que necesites agregar al sistema.
 
@@ -156,11 +172,3 @@ A continuación, en la raíz del proyecto web [Somos Jándula](https://github.co
 ![configurar somosjandula - 1](imgs/configurar_somosjandula-1.png)
 
 Para lanzar el proyecto web anterior, necesitamos instalar node.js, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
-
-### Anotación necesaria para el arranque de nuestro microservicio
-
-Debemos añadir la anotación siguiente encima de la clase de la aplicación principal de ejecución (la que tiene @SpringBootApplication) del proyecto que se quiere crear o adaptar:
-
-``@ComponentScan(basePackages = {"es.iesjandula"})``
-
-Sin eso no se tendrán en cuenta los módulos añadidos anteriormente y el programa actuará como si no estuvieran.
