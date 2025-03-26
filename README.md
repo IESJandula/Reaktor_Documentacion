@@ -52,7 +52,7 @@ Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a t
 
 Todos los proyectos necesarios anteriores han de importarse en tu entorno de programación favorito. Yo suelo usar ``Eclipse`` para los servidores y clientes Java, y ``Visual Studio Code`` para la web. En ``Eclipse`` necesitamos tener todos los proyectos a utilizar dentro del mismo workspace. Para ello, los incluimos importándolos como proyecto ``maven`` siguiendo estos pasos:
 
-<div style="display:flex; justify-content:space-between;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <img src="imgs/importar_proyecto-Eclipse-1.png" width="30%" alt="Importar proyecto en Eclipse">
     <img src="imgs/importar_proyecto-Eclipse-2.png" width="30%" alt="Importar proyecto en Eclipse">
 </div>
