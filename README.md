@@ -38,7 +38,15 @@ Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a t
   
 - Y ahora llega el momento...¿qué microservicio adicional quieres lanzar? Actualmente tenemos varios:
   
-    - sdad
+    - [Servidor de impresión remota](https://github.com/IESJandula/Reaktor_PrintersServer): recibe peticiones de impresión de usuarios desde la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/) y las deja pendientes hasta que las recoge el [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/)
+      
+    - [Servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer): recibe peticiones de reservas de recursos de usuarios ya sean fijas o temporales desde la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/)
+      
+    - [Gestión de matrículas](https://github.com/IESJandula/Reaktor_SchoolManagerServer): recibe las matrículas de los alumnos y a partir de ahí nos ofrece la posibilidad de gestionar las asignaturas, profesorado asignado, creación de grupos, etcétera. Todo ello, desde la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/)
+      
+    - [Gestión de incidencias](https://github.com/IESJandula/Reaktor_IssuesServer): recibe incidencias de usuarios desde la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/) y notifica a la persona que debería resolverla la notificación de dicha incidencia.
+ 
+    - Faltan muchos más proyectos que poco a poco iremos migrando, como: [el servidor de monitorización remota](https://github.com/IESJandula/Reaktor_MonitoringServer) y su [cliente](https://github.com/IESJandula/Reaktor_MonitoringClient), [el servidor para obtener los horarios y ubicaciones del profesorado y alumnado](https://github.com/IESJandula/Reaktor_TimetableServer), [un escaneador de equipos de red](https://github.com/IESJandula/Reaktor_NetworkServer) y [el proyecto Lince](https://github.com/IESJandula/Lince_ServerJava) que nos faltaría modificar su [código Flutter](https://github.com/IESJandula/Lince_Flutter) para que ahora funcione con JWTs. ¿Te animas a migrar alguno de ellos? [Realiza una petición por aquí] (https://github.com/IESJandula/Reaktor_Documentacion/issues/new?title=Mensaje%20para%20consulta&body=Escribe%20aquí%20tu%20mensaje.)
 
 ### Importación y compilación en Eclipse
 
