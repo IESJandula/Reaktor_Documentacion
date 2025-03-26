@@ -71,7 +71,15 @@ Así aparece si sale bien:
 
 <img src="imgs/maven_build-Eclipse-3.png" width="50%" heigth="50%" alt="Importar proyecto en Eclipse">
 
-**Importante**: Hay que tener en cuenta el orden a la hora de instalar estos módulos ya que alguno puede depender de que otro esté ya instalado anteriormente
+**Importante**: Hay que tener en cuenta el orden a la hora de instalar estos módulos ya que alguno puede depender de que otro esté ya instalado anteriormente. Por ello, el orden es el siguiente:
+
+1. [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/)
+2. [Base](https://github.com/IESJandula/Reaktor_Base/)
+3. [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/)
+4. [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/)
+5. [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
+6. El/Los proyecto/s que quieras lanzar clientes o servidores ``Java``.
+7. [Somos Jándula](https://github.com/IESJandula/somosjandula/) 
 
 ### Fichero de configuración application.yaml
 
