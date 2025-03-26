@@ -131,7 +131,7 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 <img src="imgs/configurar_Google_Firebase-2.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
-3. Una vez creado elegimos utilizar firebase en nuestra aplicación web desde este botón:
+3. Una vez creado elegimos utilizar firebase en nuestra aplicación ``web`` desde este botón:
 
 <img src="imgs/configurar_Google_Firebase-3.png" width="50%" heigth="50%" alt="configurar Google Firebase">
 
