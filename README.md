@@ -9,10 +9,12 @@ En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor e
 - [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse): te explicaré cómo importar los proyectos en Eclipse y cómo realizar el proceso de compilación.
   
 - [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-applicationyaml): entenderás el fichero de configuración y las propiedades específicas de Reaktor.
-  
+
 - [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase-y-lanzar-la-web-somosjandula): aprenderás a configurar Google Firebase ya que aquí es donde se realizará el proceso de autenticación.
   
 - [Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer](#creación-de-usuarios-en-la-bbdd-de-nuestro-microservicio-firebaseserver): será necesario que crees al menos un usuario con tu correo electrónico y con los roles pertinentes para poder acceder a la aplicación.
+
+- [Cómo lanzar la web somosjandula](#cómo-lanzar-la-web-somosjandula): aprenderás a lanzar la web de somosjandula.
 
 ## Lanzando Reaktor en tu máquina local
 
@@ -30,9 +32,9 @@ Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a t
 
 - [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/): posee funcionalidades de para la petición de JWTs al microservicio Firebase y todas aquellas dependencias comunes a cualquier servidor Spring Boot. Destacamos aquí que existen proyectos que son clientes puros como el [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) que realizan llamadas a servidores para informar o recibir información de estos. Por otro lado, también existen servidores que a su vez son clientes, por ejemplo, el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer) ya que preguntan cierta información a otro servidor, en este caso a [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
 
-- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/): es el microservicio que puede recibir peticiones de clientes como la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/), clientes como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) o como servidores tales como el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer). ``FirebaseServer`` se encarga de validar el JWT generado por Google Firebase para generar otro JWT propio de Reaktor que contiene el email, nombre y apellidos, y roles de la persona que se ha logueado a través de [Somos Jándula](https://github.com/IESJandula/somosjandula/). Para las aplicaciones cliente (que no son personas) como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) también le asigna un JWT propio pero que en lugar de un email, nombre y apellidos, posee un identificador de aplicación. Por último ``FirebaseServer``
+- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/): es el microservicio que puede recibir peticiones de clientes como la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/), clientes como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) o como servidores tales como el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer). ``FirebaseServer`` se encarga de validar el JWT generado por Google Firebase para generar otro JWT propio de Reaktor que contiene el email, nombre y apellidos, y roles de la persona que se ha logueado a través de [Somos Jándula](https://github.com/IESJandula/somosjandula/). Para las aplicaciones cliente (que no son personas) como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) también le asigna un JWT propio pero que en lugar de un email, nombre y apellidos, posee un identificador de aplicación. Por último ``FirebaseServer`` ofrece la posibilidad de consultar datos de los usuarios del sistema entre otro de sus endpoints, siendo útil para el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer), entre otros.
   
-- [Somos Jándula](https://github.com/IESJandula/somosjandula/)
+- [Somos Jándula](https://github.com/IESJandula/somosjandula/): es la web con la que se accede mediante el navegador a la plataforma. Necesitarás Node.js instalado. Más abajo existe una sección donde se explica cómo arrancarlo.
 
 ### Importación y compilación en Eclipse
 
@@ -95,7 +97,7 @@ openssl genrsa -out C:\claves\private_key.pem 2048
 
 - **reaktor.urlCors**: Lista de orígenes permitidos para las solicitudes CORS, siendo necesaria en todos los proyectos. Define los orígenes permitidos, por ejemplo: `http://localhost:5173, http://192.168.1.209:5173`.
 
-### Cómo configurar Google Firebase y lanzar la web somosjandula
+### Cómo configurar Google Firebase
 
 Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos pasos:
 
@@ -109,7 +111,6 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 3. Una vez creado elegimos utilizar firebase en nuestra aplicación web desde este botón:
 
-
 ![configurar Google Firebase - 3](imgs/configurar_Google_Firebase-3.png)
 
 4. Elegimos nombre y registramos
@@ -120,17 +121,19 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 ![configurar Google Firebase - 5](imgs/configurar_Google_Firebase-5.png)
 
-A continuación, en la raíz del proyecto web [Somos Jándula](https://github.com/IESJandula/somosjandula/) nos creamos el archivo de entorno ``.env`` y utilizamos los datos que nos ha generado para rellenar cada uno de los campos, aquí hay un ejemplo de cómo es:
-
-![configurar somosjandula - 1](imgs/configurar_somosjandula-1.png)
-
-Para lanzar el proyecto web anterior, necesitamos instalar node.js, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
-
 ## Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer
 
 Para que el sistema funcione correctamente, es necesario tantos usuarios como personas quieras que accedan a la aplicación. Normalmente, en entorno local solo te bastará con añadir una fila con tu usuario. Para ello, necesitarás hacer un INSERT en la tabla usuario con tu correo electrónico, tu nombre y apellidos, y los roles que quieras tener. En cuanto a los roles, para poder visualizar todas las opciones de la aplicación, se aconseja que el valor sea `PROFESOR,DIRECCION,ADMINISTRADOR`
 
 Repite este paso para cada usuario que necesites agregar al sistema.
+
+### Cómo lanzar la web somosjandula
+
+A continuación, en la raíz del proyecto web [Somos Jándula](https://github.com/IESJandula/somosjandula/) nos creamos el archivo de entorno ``.env`` y utilizamos los datos que nos ha generado para rellenar cada uno de los campos, aquí hay un ejemplo de cómo es:
+
+![configurar somosjandula - 1](imgs/configurar_somosjandula-1.png)
+
+Para lanzar el proyecto web anterior, necesitamos instalar node.js, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
 
 ### Anotación necesaria para el arranque de nuestro microservicio
 
