@@ -111,6 +111,12 @@ openssl genrsa -out C:\claves\private_key.pem 2048
 
 - **reaktor.urlCors**: es una lista de orígenes permitidos para las solicitudes CORS, siendo necesaria en todos los proyectos. Esto es para que solo las URLs que indiquemos sean las que permite el servidor para recibir peticiones. Por ejemplo: `http://localhost:5173, http://192.168.1.209:5173`.
 
+Llegado a este punto, podrás preguntarte de dónde puedes descargar el software openssl. Aquí te dejo la información:
+
+<img src="imgs/instalar_SSL-1.png" width="50%" heigth="50%" alt="Open SSL">
+
+<img src="imgs/instalar_SSL-2.png" width="50%" heigth="50%" alt="Open SSL">
+
 ### Cómo configurar Google Firebase
 
 Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos pasos:
