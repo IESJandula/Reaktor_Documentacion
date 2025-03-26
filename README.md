@@ -151,7 +151,7 @@ Repite este paso para cada usuario que necesites agregar al sistema.
 
 ### Cómo lanzar la web somosjandula
 
-A continuación, en la raíz del proyecto web [Somos Jándula](https://github.com/IESJandula/somosjandula/) nos creamos el archivo de entorno ``.env`` y utilizamos los datos que nos ha generado para rellenar cada uno de los campos, aquí hay un ejemplo de cómo es:
+A continuación, en la raíz del proyecto web [Somos Jándula](https://github.com/IESJandula/somosjandula/) nos creamos el archivo de entorno ``.env`` y utilizamos los datos que nos ha generado firebase en el punto 5 del apartado [Cómo configurar Google Firebase](#cómo-configurar-google-firebase) para rellenar cada uno de los campos, aquí hay un ejemplo de cómo es:
 
 ![configurar somosjandula - 1](imgs/configurar_somosjandula-1.png)
 
