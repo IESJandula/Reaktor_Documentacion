@@ -4,6 +4,8 @@ Si estás aquí es porque quieres lanzar una serie de proyectos Reaktor o quiere
 
 En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor en tu entorno local](#lanzando-reaktor-en-tu-máquina-local). Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. ¡Parece mucho! ¡Pero en esta guía paso a paso verás que es muy fácil! De esta forma, para arrancar el entorno Reaktor tenemos los siguientes apartados:
 
+- [Requisitos](#requisitos): todo aquel software necesario para poder trabajar.
+
 - [Proyectos necesarios para importar](#proyectos-necesarios-para-importar): verás los proyectos necesarios para poder arrancar el entorno Reaktor.
   
 - [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse): te explicaré cómo importar los proyectos en Eclipse y cómo realizar el proceso de compilación.
@@ -19,6 +21,14 @@ En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor e
 ## Lanzando Reaktor en tu máquina local
 
 En esta sección iremos paso a paso configurando tu entorno local para que puedas desplegar todo el entorno Reaktor en tu máquina.
+
+### Requisitos
+
+- [Eclipse for Java Developers](https://www.eclipse.org/downloads/)
+- [Maven](https://maven.apache.org/download.cgi): normalmente viene instalado por defecto en Eclipse, pero por si acaso tienes el enlace de descarga aquí.
+- [Open SSL](https://slproweb.com/products/Win32OpenSSL.html): se explica más abajo cómo descargarlo, configurarlo e instalarlo.
+- Google Firebase: se explica [aquí]((#cómo-configurar-google-firebase)) como configurarlo.
+- [Node.js](https://nodejs.org/en/download): versión 20.10 o parecida.
 
 ### Proyectos necesarios para importar
 
@@ -167,8 +177,10 @@ Repite este paso para cada usuario que necesites agregar al sistema.
 
 ### Cómo lanzar la web somosjandula
 
-A continuación, en la raíz del proyecto web [Somos Jándula](https://github.com/IESJandula/somosjandula/) nos creamos el archivo de entorno ``.env`` y utilizamos los datos que nos ha generado firebase en el punto 5 del apartado [Cómo configurar Google Firebase](#cómo-configurar-google-firebase) para rellenar cada uno de los campos, aquí hay un ejemplo de cómo es:
+Llegados a este punto, ya puedes lanzar los servidores desde Eclipse, y una vez hecho eso, sigue estos pasos para configurar el proyecto web.
+
+1. En la raíz del proyecto web [Somos Jándula](https://github.com/IESJandula/somosjandula/) nos creamos el archivo de entorno ``.env`` y utilizamos los datos que nos ha generado firebase en el punto 5 del apartado [Cómo configurar Google Firebase](#cómo-configurar-google-firebase) para rellenar cada uno de los campos, aquí hay un ejemplo de cómo quedaría:
 
 ![configurar somosjandula - 1](imgs/configurar_somosjandula-1.png)
 
-Para lanzar el proyecto web anterior, necesitamos instalar node.js, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
+Para lanzar el proyecto web anterior, necesitamos instalar ``Node.js``, sino la consola no detecta ``npm``. Tras eso ejecutar el ``npm install`` en la consola cmd, en la raíz del proyecto. Por último, podemos ejecutar el front con ``npm run dev``.
