@@ -83,7 +83,7 @@ Así aparece si sale bien:
 
 ### Fichero de configuración application.yaml
 
-En el archivo de configuración `application.yaml` de nuestro proyecto es necesario añadir una serie de configuraciones. Ejemplo con el proyecto School Manager:
+Llegados a este punto, es importante que conozcáis los ficheros de configuración antes de arrancar la aplicación, ya que sin una configuración correcta no vais a poder arrancar los clientes y servidores. Antes de nada descarga e instala la versión Community de MySQL(https://dev.mysql.com/downloads/windows/installer/8.0.html), ya que los servidores almacenan información en BBDD. Una vez hecho esto, vamos a ver una serie de propiedades interesantes que posee el fichero ``application.yaml`` (puede tener más en función del proyecto, pero estas son las más interesantes):
 
 ```
 reaktor:
@@ -93,24 +93,23 @@ reaktor:
  urlCors: http://localhost:5173, http://192.168.1.209:5173
 ```
 
-Para poder obtener el valor de estas propiedades, se hace uso de la anotación `@Value`. A continuación se muestran la descripción de las más importantes:
+Aquí te explico que son cada una de ellas:
 
-- **reaktor.publicKeyFile**: Ruta al archivo de clave pública, siendo necesaria en todos los proyectos. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando:
+- **reaktor.publicKeyFile**: es una ruta al archivo de clave pública, siendo necesaria en todos los proyectos. Como sabes, Reaktor genera sus propios JWT. Pues bien, para aquellos microservicios que quieran validar si el JWT es correcto, se usa esta clave pública para ello. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando:
 
 ```
 openssl rsa -in C:\claves\private_key.pem -pubout -out C:\claves\public_key.pem
 ```
 
-- **reaktor.privateKeyFile**: Ruta al archivo de clave privada, siendo solo necesaria en el proyecto FirebaseServer. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando:
+- **reaktor.privateKeyFile**: es una ruta al archivo de clave privada, siendo solo necesaria en el proyecto ``FirebaseServer``. Como decía arriba, Reaktor genera sus propios JWT y como se puede sobreentender es ``FirebaseServer`` quien los genera, por lo que es importante que tengas en cuenta cómo crear la clave privada, pero solo se utilizará por el microservicio anterior. Se almacena en `C:\claves`. Para conseguirla, genera la clave privada utilizando el siguiente comando:
 
 ```
 openssl genrsa -out C:\claves\private_key.pem 2048
 ```
 
-- **reaktor.googleCredentialsFile**: Ruta al archivo JSON de credenciales de Firebase, siendo solo necesaria en el proyecto FirebaseServer. Se almacena en `C:\claves`. Se explica en el apartado siguiente.
+- **reaktor.googleCredentialsFile**: es una ruta al archivo JSON de credenciales de Firebase, siendo solo necesaria en el proyecto FirebaseServer. Se almacena en `C:\claves`. Se explica cómo conseguirla en el apartado [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase).
 
-
-- **reaktor.urlCors**: Lista de orígenes permitidos para las solicitudes CORS, siendo necesaria en todos los proyectos. Define los orígenes permitidos, por ejemplo: `http://localhost:5173, http://192.168.1.209:5173`.
+- **reaktor.urlCors**: es una lista de orígenes permitidos para las solicitudes CORS, siendo necesaria en todos los proyectos. Esto es para que solo las URLs que indiquemos sean las que permite el servidor para recibir peticiones. Por ejemplo: `http://localhost:5173, http://192.168.1.209:5173`.
 
 ### Cómo configurar Google Firebase
 
