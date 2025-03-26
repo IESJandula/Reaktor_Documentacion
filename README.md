@@ -113,11 +113,11 @@ openssl genrsa -out C:\claves\private_key.pem 2048
 
 Llegado a este punto, podrás preguntarte de dónde puedes descargar el software openssl. Para ello, debes realizar la descarga desde [aquí](https://slproweb.com/products/Win32OpenSSL.html), eligiendo esta opción:
 
-<img src="imgs/instalar_SSL-1.png" width="30%" heigth="30%" alt="Open SSL">
+<img src="imgs/instalar_SSL-1.png" width="40%" heigth="40%" alt="Open SSL">
 
 Una vez instalado, debes añadir a las variables de entorno de Windows la carpeta de instalación:
 
-<img src="imgs/instalar_SSL-2.png" width="30%" heigth="30%" alt="Open SSL">
+<img src="imgs/instalar_SSL-2.png" width="40%" heigth="40%" alt="Open SSL">
 
 ### Cómo configurar Google Firebase
 
@@ -125,15 +125,15 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 1. Entramos a la [Consola de firebase](https://console.firebase.google.com/)
 
-<img src="imgs/configurar_Google_Firebase-1.png" width="50%" heigth="50%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-1.png" width="30%" heigth="30%" alt="configurar Google Firebase">
 
 2. Elegimos un nombre y damos a continuar hasta el final (google analytics no es necesario) para crear el proyecto..
 
-<img src="imgs/configurar_Google_Firebase-2.png" width="50%" heigth="50%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-2.png" width="30%" heigth="30%" alt="configurar Google Firebase">
 
 3. Una vez creado elegimos utilizar firebase en nuestra aplicación web desde este botón:
 
-<img src="imgs/configurar_Google_Firebase-3.png" width="50%" heigth="50%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-3.png" width="30%" heigth="30%" alt="configurar Google Firebase">
 
 4. Elegimos nombre y registramos
 
