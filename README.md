@@ -121,7 +121,7 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 ![configurar Google Firebase - 5](imgs/configurar_Google_Firebase-5.png)
 
-## Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer
+### Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer
 
 Para que el sistema funcione correctamente, es necesario tantos usuarios como personas quieras que accedan a la aplicación. Normalmente, en entorno local solo te bastará con añadir una fila con tu usuario. Para ello, necesitarás hacer un INSERT en la tabla usuario con tu correo electrónico, tu nombre y apellidos, y los roles que quieras tener. En cuanto a los roles, para poder visualizar todas las opciones de la aplicación, se aconseja que el valor sea `PROFESOR,DIRECCION,ADMINISTRADOR`
 
