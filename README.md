@@ -27,7 +27,7 @@ En esta sección iremos paso a paso configurando tu entorno local para que pueda
 - [Eclipse for Java Developers](https://www.eclipse.org/downloads/)
 - [Maven](https://maven.apache.org/download.cgi): normalmente viene instalado por defecto en Eclipse, pero por si acaso tienes el enlace de descarga aquí.
 - [Open SSL](https://slproweb.com/products/Win32OpenSSL.html): se explica más abajo cómo descargarlo, configurarlo e instalarlo.
-- Google Firebase: se explica [aquí]((#cómo-configurar-google-firebase)) como configurarlo.
+- Google Firebase: se explica [aquí](#cómo-configurar-google-firebase) como configurarlo.
 - [Node.js](https://nodejs.org/en/download): versión 20.10 o parecida.
 
 ### Proyectos necesarios para importar
