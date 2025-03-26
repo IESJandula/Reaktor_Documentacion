@@ -10,7 +10,7 @@ En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor e
   
 - [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-applicationyaml): entenderás el fichero de configuración y las propiedades específicas de Reaktor.
 
-- [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase-y-lanzar-la-web-somosjandula): aprenderás a configurar Google Firebase ya que aquí es donde se realizará el proceso de autenticación.
+- [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase): aprenderás a configurar Google Firebase ya que aquí es donde se realizará el proceso de autenticación.
   
 - [Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer](#creación-de-usuarios-en-la-bbdd-de-nuestro-microservicio-firebaseserver): será necesario que crees al menos un usuario con tu correo electrónico y con los roles pertinentes para poder acceder a la aplicación.
 
