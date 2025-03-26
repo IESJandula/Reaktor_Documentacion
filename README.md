@@ -50,11 +50,7 @@ Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a t
 
 ### Importación y compilación en Eclipse
 
-A la hora de crear un nuevo proyecto o adaptar uno ya existente para su uso con Reaktor se deben tener en cuenta una serie de proyectos maven que hacen la vez de módulos necesarios para su correcto funcionamiento, ya que cada uno de ellos implementa configuraciones o dependencias necesarias.
-
-Dependiendo del IDE la manera de incluirlos en el proyecto final es ligeramente distinta.
-
-En `eclipse` necesitamos los proyectos dentro del workspace común de nuestro proyecto a adaptar o crear. Para ello los incluimos importándolos como proyecto maven:
+Todos los proyectos necesarios anteriores han de importarse en tu entorno de programación favorito. Yo suelo usar ``Eclipse`` para los servidores y clientes Java, y ``Visual Studio Code`` para la web. En ``Eclipse`` necesitamos tener todos los proyectos a utilizar dentro del mismo workspace. Para ello, los incluimos importándolos como proyecto ``maven`` siguiendo estos pasos:
 
 ![Importar proyecto en Eclipse](imgs/importar_proyecto-Eclipse-1.png)
 
