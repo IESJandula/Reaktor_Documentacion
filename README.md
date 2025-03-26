@@ -2,7 +2,7 @@
 
 Si estás aquí es porque quieres lanzar una serie de proyectos Reaktor o quieres adaptar tu proyecto Spring Boot al formato Reaktor.
 
-En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor en tu entorno local](#lanzando-reaktor-en-tu-máquina-local). Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. De esta forma, tenemos los siguientes apartados:
+En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor en tu entorno local](#lanzando-reaktor-en-tu-máquina-local). Esto conlleva no solo la descarga de dependencias, sino también la generación de una serie de ficheros de configuración, la creación de un proyecto en Google Firebase y la descarga de sus ficheros de configuración para añadirlos a los anteriores. ¡Parece mucho! ¡Pero en esta guía paso a paso verás que es muy fácil! De esta forma, para arrancar el entorno Reaktor tenemos los siguientes apartados:
 
 - [Proyectos necesarios para importar](#proyectos-necesarios-para-importar): verás los proyectos necesarios para poder arrancar el entorno Reaktor.
   
@@ -16,7 +16,7 @@ En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor e
 
 ## Lanzando Reaktor en tu máquina local
 
-En esta sección iremos paso a paso configurando tu entorno local para que puedas desplegar todo el sistema Reaktor en tu máquina.
+En esta sección iremos paso a paso configurando tu entorno local para que puedas desplegar todo el entorno Reaktor en tu máquina.
 
 ### Proyectos necesarios para importar
 
@@ -24,13 +24,13 @@ Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a t
 
 - [Dependencies](https://github.com/IESJandula/Reaktor_Dependencies/): contiene todas las dependencias de los proyectos Reaktor. Realmente, es un pom.xml con todas las librerías básicas, no tiene código Java.
 
-- [Base](https://github.com/IESJandula/Reaktor_Base/): contiene funcionalidades de reinicio automático, entre otras utilidades interesantes.
+- [Base](https://github.com/IESJandula/Reaktor_Base/): contiene funcionalidades de reinicio automático, entre otras utilidades interesantes que son comunes a cualquier proyecto Reaktor, ya sea cliente o servidor.
 
-- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/): posee funcionalidades de seguridad y todas aquellas dependencias comunes a cualquier servidor Spring Boot.
+- [BaseServer](https://github.com/IESJandula/Reaktor_BaseServer/): posee funcionalidades de seguridad y todas aquellas dependencias comunes a cualquier servidor Spring Boot. Cabe destacar, que la mayoría de los proyectos son servidores, ya que ofrecen recursos a los que insertar, actualizar, consultar y borrar.
 
-- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/): posee funcionalidades de para la petición de JWTs al microservicio Firebase y todas aquellas dependencias comunes a cualquier servidor Spring Boot.
+- [BaseClient](https://github.com/IESJandula/Reaktor_BaseClient/): posee funcionalidades de para la petición de JWTs al microservicio Firebase y todas aquellas dependencias comunes a cualquier servidor Spring Boot. Destacamos aquí que existen proyectos que son clientes puros como el [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) que realizan llamadas a servidores para informar o recibir información de estos. Por otro lado, también existen servidores que a su vez son clientes, por ejemplo, el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer) ya que preguntan cierta información a otro servidor, en este caso a [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
 
-- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/)
+- [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/):
   
 - [Somos Jándula](https://github.com/IESJandula/somosjandula/)
 
