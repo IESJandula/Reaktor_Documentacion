@@ -35,6 +35,10 @@ Los proyectos Maven de Reaktor previos a importar y necesarios para comenzar a t
 - [FirebaseServer](https://github.com/IESJandula/Reaktor_FirebaseServer/): es el microservicio que puede recibir peticiones de clientes como la web de [Somos Jándula](https://github.com/IESJandula/somosjandula/), clientes como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) o como servidores tales como el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer). ``FirebaseServer`` se encarga de validar el JWT generado por Google Firebase para generar otro JWT propio de Reaktor que contiene el email, nombre y apellidos, y roles de la persona que se ha logueado a través de [Somos Jándula](https://github.com/IESJandula/somosjandula/). Para las aplicaciones cliente (que no son personas) como [cliente de impresión remota](https://github.com/IESJandula/Reaktor_PrintersClient/) también le asigna un JWT propio pero que en lugar de un email, nombre y apellidos, posee un identificador de aplicación. Por último ``FirebaseServer`` ofrece la posibilidad de consultar datos de los usuarios del sistema entre otro de sus endpoints, siendo útil para el [servidor de reservas de recursos](https://github.com/IESJandula/Reaktor_BookingServer), entre otros.
   
 - [Somos Jándula](https://github.com/IESJandula/somosjandula/): es la web con la que se accede mediante el navegador a la plataforma. Necesitarás Node.js instalado. Más abajo existe una sección donde se explica cómo arrancarlo.
+  
+- Y ahora llega el momento...¿qué microservicio adicional quieres lanzar? Actualmente tenemos varios:
+  
+    - sdad
 
 ### Importación y compilación en Eclipse
 
