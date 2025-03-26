@@ -125,23 +125,23 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 1. Entramos a la [Consola de firebase](https://console.firebase.google.com/)
 
-<img src="imgs/configurar_Google_Firebase-1.png" width="30%" heigth="30%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-1.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
 2. Elegimos un nombre y damos a continuar hasta el final (google analytics no es necesario) para crear el proyecto..
 
-<img src="imgs/configurar_Google_Firebase-2.png" width="30%" heigth="30%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-2.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
 3. Una vez creado elegimos utilizar firebase en nuestra aplicación web desde este botón:
 
-<img src="imgs/configurar_Google_Firebase-3.png" width="30%" heigth="30%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-3.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
 4. Elegimos nombre y registramos
 
-<img src="imgs/configurar_Google_Firebase-4.png" width="50%" heigth="50%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-4.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
 5. Esto nos genera el siguiente bloque de código
 
-<img src="imgs/configurar_Google_Firebase-5.png" width="50%" heigth="50%" alt="configurar Google Firebase">
+<img src="imgs/configurar_Google_Firebase-5.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
 ### Creación de usuarios en la BBDD de nuestro microservicio FirebaseServer
 
