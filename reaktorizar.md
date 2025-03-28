@@ -161,11 +161,11 @@ Ejemplo anotación:
 
 ![image](https://github.com/user-attachments/assets/1f827a2e-0add-489a-b24f-7b85a0d87dba)
 
+![image](https://github.com/user-attachments/assets/b07b398f-8bf6-497c-b071-c944d70f1b95)
+
+Para casos con mas de un rol se utiliza la siguiente sintaxis.
+![image](https://github.com/user-attachments/assets/9b9a5112-75d0-4d93-8398-730ec11509f3)
 
 # 📌 Pruebas de compilación.
 Con los ficheros `yaml` ya adaptados a nuestro proyecto, procedemos a probar la compilación del proyecto. 
-
-
-
-
 
