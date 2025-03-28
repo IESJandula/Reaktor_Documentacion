@@ -3,6 +3,9 @@ Los ficheros del proyecto deben de encontrarse siempre a nivel de directorio rai
 
 ![image](https://github.com/user-attachments/assets/9b235357-38d6-4f6f-ada1-3f68e5b7c312)
 
+# 📌 Actualizar nombre paqueteria y queries de DTOs.
+Al actualizar los nombres de los paquetes como es posible que hayamos hecho a este punto, será importante actualizar las queries presentes en los distintos repositorios que crean DTOs en el proyecto para que reflejen la nueva paqueteria. 
+
 # 📌 Cambios en el POM
 En el pom ya no partimos desde el `parent` sino que ahora se parte del siguiente proyecto.
 Este proyecto es simplemente un conjunto de dependencias pre-configuradas.
@@ -132,9 +135,6 @@ Copiamos la siguiente configuración de `<build>`.
   </plugins>
 </build>
 ```
-
-# 📌 Actualizar nombre paqueteria y queries de DTOs.
-Al actualizar los nombres de los paquetes como es posible que hayamos hecho a este punto, será importante actualizar las queries presentes en los distintos repositorios que crean DTOs en el proyecto para que reflejen la nueva paqueteria. 
 
 # 📌 Copiamos ficheros de configuración de proyecto `yaml`.
 Copiamos los siguientes ficheros desde otro proyecto ya reactorizado como por ejemplo Reaktor Booking Server.
