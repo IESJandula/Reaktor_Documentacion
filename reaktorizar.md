@@ -136,11 +136,14 @@ Copiamos la siguiente configuración de `<build>`.
 # 📌 Actualizar nombre paqueteria y queries de DTOs.
 Al actualizar los nombres de los paquetes como es posible que hayamos hecho a este punto, será importante actualizar las queries presentes en los distintos repositorios que crean DTOs en el proyecto para que reflejen la nueva paqueteria. 
 
-# 📌 Copiamos ficheros de configuración de proyecto yaml.
+# 📌 Copiamos ficheros de configuración de proyecto `yaml`.
 Copiamos los siguientes ficheros desde otro proyecto ya reactorizado como por ejemplo Reaktor Booking Server.
 ![image](https://github.com/user-attachments/assets/b23abe99-e882-4fb2-9d91-2de1f8cc50f0)
 
 Tras copiar esos ficheros deberemos adaptar los `yaml` recien copiados para que coincidan los puertos, nombres y otros datos que hacen referencia al proyecto. 
+Para proyectos que además de servidor fungen de cliente, deberemos configurar un `clientId`.
+
+<!-- En el fichero `application-VPS.yaml` modificamos según nustro proyecto: -->
 
 >[!TIP]
 > Lo que nos interesa es traernos una configuración pre-existente de otros proyectos de reaktor, tomarla como base y adaptarla a nuestro proyecto según sus necesidades.
@@ -148,8 +151,19 @@ Tras copiar esos ficheros deberemos adaptar los `yaml` recien copiados para que 
 >[!NOTE]
 > La primera vez que lanzamos el proyecto lo haremos en modo `create`, y a partir del segundo lanzamiento en modo `none`.
 
+# 📌 Aplicar seguridad.
+Para securizar el proyecto debemos de introducir unas anotaciones especiales encima de los endpoints. Podemos copiar estas anotaciones de un proyecto ya reaktorizado como referencia.
+
+Ejemplo anotación:
+```java
+@PreAuthorize("hasRole('" + BaseConstants.ROLE_PROFESOR + "')")
+```
+
+![image](https://github.com/user-attachments/assets/1f827a2e-0add-489a-b24f-7b85a0d87dba)
 
 
+# 📌 Pruebas de compilación.
+Con los ficheros `yaml` ya adaptados a nuestro proyecto, procedemos a probar la compilación del proyecto. 
 
 
 
