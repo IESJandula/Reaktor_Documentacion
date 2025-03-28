@@ -3,7 +3,7 @@ Los ficheros del proyecto deben de encontrarse siempre a nivel de directorio rai
 
 ![image](https://github.com/user-attachments/assets/9b235357-38d6-4f6f-ada1-3f68e5b7c312)
 
-## 📍 Cambios en el POM
+# 📌 Cambios en el POM
 En el pom ya no partimos desde el `parent` sino que ahora se parte del siguiente proyecto.
 Este proyecto es simplemente un conjunto de dependencias pre-configuradas.
    
@@ -16,8 +16,8 @@ Este proyecto es simplemente un conjunto de dependencias pre-configuradas.
 </parent>
 ```
 
-## 📍 Nombre del proyecto.
-El artifactId y el name, deben de seguir la 'convención' de los demás proyectos integrados de reaktor. 
+## 📍 Versión, nombre del proyecto.
+Borramos la versión de Java especificada en el pom. Además el `artifactId` y el `name`, deben de seguir la _convención_ de los demás proyectos integrados de reaktor. 
 ```xml
 	<groupId>es.iesjandula.reaktor</groupId>
 	<artifactId>ProjectorServer</artifactId>
@@ -56,6 +56,8 @@ En el fichero `pom.xml` no deben de existir dependencias que no sean las siguien
 ## 📍 Build
 Copiamos la siguiente configuración de `<build>`.
 
+>[!IMPORTANT]
+>Es importante actualizar la `mainClass` para que corresponda a la clase de lanzamiento del proyecto que deseamos reaktorizar.
 
 ```xml
 <build>
@@ -130,5 +132,26 @@ Copiamos la siguiente configuración de `<build>`.
   </plugins>
 </build>
 ```
+
+# 📌 Actualizar nombre paqueteria y queries de DTOs.
+Al actualizar los nombres de los paquetes como es posible que hayamos hecho a este punto, será importante actualizar las queries presentes en los distintos repositorios que crean DTOs en el proyecto para que reflejen la nueva paqueteria. 
+
+# 📌 Copiamos ficheros de configuración de proyecto yaml.
+Copiamos los siguientes ficheros desde otro proyecto ya reactorizado como por ejemplo Reaktor Booking Server.
+![image](https://github.com/user-attachments/assets/b23abe99-e882-4fb2-9d91-2de1f8cc50f0)
+
+Tras copiar esos ficheros deberemos adaptar los `yaml` recien copiados para que coincidan los puertos, nombres y otros datos que hacen referencia al proyecto. 
+
+>[!TIP]
+> Lo que nos interesa es traernos una configuración pre-existente de otros proyectos de reaktor, tomarla como base y adaptarla a nuestro proyecto según sus necesidades.
+
+>[!NOTE]
+> La primera vez que lanzamos el proyecto lo haremos en modo `create`, y a partir del segundo lanzamiento en modo `none`.
+
+
+
+
+
+
 
 
