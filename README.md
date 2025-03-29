@@ -58,16 +58,16 @@ reaktor:
 
 Para poder obtener el valor de estas propiedades, se hace uso de la anotación `@Value`. A continuación se muestran la descripción de las más importantes:
 
-- **reaktor.publicKeyFile**: Ruta al archivo de clave pública, siendo necesaria en todos los proyectos. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando:
-
-```
-openssl rsa -in C:\claves\private_key.pem -pubout -out C:\claves\public_key.pem
-```
-
 - **reaktor.privateKeyFile**: Ruta al archivo de clave privada, siendo solo necesaria en el proyecto FirebaseServer. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando:
 
 ```
 openssl genrsa -out C:\claves\private_key.pem 2048
+```
+
+- **reaktor.publicKeyFile**: Ruta al archivo de clave pública, siendo necesaria en todos los proyectos. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando (fíjate que se basa en la clave generada en el punto anterior):
+
+```
+openssl rsa -in C:\claves\private_key.pem -pubout -out C:\claves\public_key.pem
 ```
 
 - **reaktor.googleCredentialsFile**: Ruta al archivo JSON de credenciales de Firebase, siendo solo necesaria en el proyecto FirebaseServer. Se almacena en `C:\claves`. Se explica en el apartado siguiente.
