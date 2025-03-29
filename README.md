@@ -107,16 +107,16 @@ reaktor:
 
 Aquí te explico que son cada una de ellas:
 
-- **reaktor.publicKeyFile**: es una ruta al archivo de clave pública, siendo necesaria en todos los proyectos. Como sabes, Reaktor genera sus propios JWT. Pues bien, para aquellos microservicios que quieran validar si el JWT es correcto, se usa esta clave pública para ello. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando:
-
-```
-openssl rsa -in C:\claves\private_key.pem -pubout -out C:\claves\public_key.pem
-```
-
 - **reaktor.privateKeyFile**: es una ruta al archivo de clave privada, siendo solo necesaria en el proyecto ``FirebaseServer``. Como decía arriba, Reaktor genera sus propios JWT y como se puede sobreentender es ``FirebaseServer`` quien los genera, por lo que es importante que tengas en cuenta cómo crear la clave privada, pero solo se utilizará por el microservicio anterior. Se almacena en `C:\claves`. Para conseguirla, genera la clave privada utilizando el siguiente comando:
 
 ```
 openssl genrsa -out C:\claves\private_key.pem 2048
+```
+
+- **reaktor.publicKeyFile**: es una ruta al archivo de clave pública, siendo necesaria en todos los proyectos. Como sabes, Reaktor genera sus propios JWT. Pues bien, para aquellos microservicios que quieran validar si el JWT es correcto, se usa esta clave pública para ello. Se almacena en `C:\claves`. Para conseguirla, genera la clave pública utilizando el siguiente comando:
+
+```
+openssl rsa -in C:\claves\private_key.pem -pubout -out C:\claves\public_key.pem
 ```
 
 - **reaktor.googleCredentialsFile**: es una ruta al archivo JSON de credenciales de Firebase, siendo solo necesaria en el proyecto FirebaseServer. Se almacena en `C:\claves`. Se explica cómo conseguirla en el apartado [Cómo configurar Google Firebase y lanzar la web somosjandula](#cómo-configurar-google-firebase).
