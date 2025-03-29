@@ -155,7 +155,7 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 <img src="imgs/configurar_Google_Firebase-5.png" width="50%" heigth="50%" alt="configurar Google Firebase">
 
-6. Por último, debes descargarte un fichero de clave privada (Botón de la imagen `Generar clave privada`) que almacenarás en `C:\claves`. Este será el fichero que hablamos más arriba asociado a la propiedad **reaktor.googleCredentialsFile**:
+6. Por último, debes descargarte un fichero de clave privada (Botón de la imagen `Generar nueva clave privada`) que almacenarás en `C:\claves`. Este será el fichero que hablamos más arriba asociado a la propiedad **reaktor.googleCredentialsFile**:
 
 <img src="imgs/configurar_Google_Firebase-6.png" width="70%" heigth="70%" alt="configurar Google Firebase">
 
