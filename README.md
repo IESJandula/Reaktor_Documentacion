@@ -8,7 +8,7 @@ En esta guía vamos a comenzar aprendiendo [cómo arrancar un proyecto Reaktor e
 
 - [Proyectos necesarios para importar](#proyectos-necesarios-para-importar): verás los proyectos necesarios para poder arrancar el entorno Reaktor.
   
-- [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse): te explicaré cómo importar los proyectos en Eclipse y cómo realizar el proceso de compilación.
+- [Importación y compilación en Eclipse](#importación-y-compilación-en-eclipse): te explicaré cómo importar los proyectos en Eclipse y cómo realizar el proceso de compilación. No estás obligado a usar Eclipse, usa cualquier Entorno de Desarrollo en el que estés más cómodo que tengas configurado con Java y Maven.
   
 - [Conocer el fichero de configuración application.yaml](#fichero-de-configuración-applicationyaml): entenderás el fichero de configuración y las propiedades específicas de Reaktor.
 
