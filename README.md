@@ -141,7 +141,7 @@ Para crear una cuenta en firebase usaremos una cuenta de google, siguiendo estos
 
 <img src="imgs/configurar_Google_Firebase-1.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
-2. Elegimos un nombre y damos a continuar hasta el final (google analytics no es necesario) para crear el proyecto..
+2. Elegimos un nombre (el que quieras) y damos a continuar hasta el final (google analytics no es necesario) para crear el proyecto..
 
 <img src="imgs/configurar_Google_Firebase-2.png" width="40%" heigth="40%" alt="configurar Google Firebase">
 
