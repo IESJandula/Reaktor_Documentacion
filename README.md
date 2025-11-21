@@ -178,7 +178,7 @@ use reaktor_firebaseserver
 2. Hacer un ``INSERT`` en la tabla ``usuario`` con tu correo electrónico personal de Google (ya que la junta tiene capado el acceso a las APIs de Google Firebase):
 
 ```
-INSERT INTO usuario VALUES ('mi_email_personal@gmail.com', 'Francisco Manuel', 'Benítez Chico', 'PROFESOR,DIRECCION,ADMINISTRADOR') ;
+INSERT INTO usuario(email, nombre, apellidos, roles) VALUES ('mi_email_personal@gmail.com', 'Francisco Manuel', 'Benítez Chico', 'PROFESOR,DIRECCION,ADMINISTRADOR') ;
 ```
 
 Si te fijas, el primer campo es el email, el segundo tu nombre, el tercero tus apellidos y el último el conjunto de roles que posees. Es importante que te pongas todos los roles para ver todas las opciones de la aplicación. Si en algún momento quieres ver la aplicación con un role por defecto, deja solo el de ``PROFESOR``.
