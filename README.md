@@ -95,7 +95,7 @@ Así aparece si sale bien:
 
 Llegados a este punto, es importante que conozcáis los ficheros de configuración antes de arrancar la aplicación, ya que sin una configuración correcta no vais a poder arrancar los clientes y servidores. Antes de nada descarga e instala la versión Community de MySQL(https://dev.mysql.com/downloads/windows/installer/8.0.html), ya que los servidores almacenan información en BBDD. Recuerda también ponerle al usuario de ``root`` la contraseña ``toor`` ya que es la que tienen por defecto todos los ``application.yaml`` (¡sino vas a tener que modificar uno a uno los ficheros de los proyectos!).
 
-Una vez hecho esto, vamos a ver una serie de propiedades interesantes que posee el fichero ``application.yaml`` (puede tener más en función del proyecto, pero estas son las más interesantes):
+Una vez hecho esto, vamos a ver una serie de propiedades interesantes que posee el fichero ``application.yaml`` de uno de los proyectos microservicios que hemos descargado (puede tener más en función del proyecto, pero estas son las más interesantes):
 
 ```
 reaktor:
