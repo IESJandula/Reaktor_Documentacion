@@ -3,20 +3,21 @@
 ## 1. Crea tu fichero .env
 
 En la raíz del proyecto, en el fichero llamado exactamente .env (no .env.example, no .env.development) con este contenido, sustituye cada valor por el oficial:
-
+```
 VITE_FIREBASE_API_KEY=...
 VITE_FIREBASE_AUTH_DOMAIN=...
 VITE_FIREBASE_PROJECT_ID=...
 VITE_FIREBASE_STORAGE_BUCKET=...
 VITE_FIREBASE_MESSAGING_SENDER_ID=...
 VITE_FIREBASE_APP_ID=...
-
+```
 Este fichero está en .gitignore a propósito: nunca lo subas al repositorio ni lo compartas en capturas de pantalla.
 
 ## 2. Arranca el proyecto
+```
 npm install
 npm run dev
-
+```
 Abre la URL que te da Vite (normalmente http://localhost:5173).
 
 ## 3. Verifica que funciona
