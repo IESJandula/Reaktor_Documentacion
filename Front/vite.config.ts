@@ -1,24 +1,35 @@
-/// <reference types="vitest" />
-
-import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 
-// https://vitejs.dev/config/
-export default defineConfig({  
-  plugins: [
-    vue(),
-    legacy()
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+const manualChunks = (id: string) => {
+  const normalizedId = id.replaceAll('\\', '/')
+
+  if (!normalizedId.includes('/node_modules/')) return undefined
+
+  if (
+    normalizedId.includes('/node_modules/vue/')
+    || normalizedId.includes('/node_modules/@vue/')
+  ) return 'vue'
+
+  if (
+    normalizedId.includes('/node_modules/firebase/')
+    || normalizedId.includes('/node_modules/@firebase/')
+  ) return 'firebase'
+
+  return undefined
+}
+
+export default defineConfig({
+  plugins: [vue()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks,
+      },
     },
   },
-  base: process.env.VITE_BASE_URL || '/',
   test: {
-    globals: true,
-    environment: 'jsdom'
-  }
+    environment: 'node',
+    include: ['src/**/*.test.ts'],
+  },
 })
