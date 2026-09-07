@@ -1,4 +1,25 @@
-# Reaktor: integración directa con un JWT de Google
+# Reaktor_Documentacion
+
+Este repositorio reúne materiales para comprender Reaktor desde dos perspectivas complementarias: la integración técnica de clientes con sus servicios y la aplicación educativa de Somos Jándula en proyectos de Formación Profesional.
+
+## Accesos rápidos
+
+| Contenido | Finalidad |
+|---|---|
+| [Kit REA Somos Jándula](rea/somos-jandula/README.md) | Guía, rúbrica DigComp 2.2, plantilla y ejemplo para adaptar la experiencia en otros centros. |
+| [Ejemplo frontend](Front) | Inicio de sesión con Google/Firebase y consulta de un servicio de Reaktor. |
+| [Ejemplo Java](Java/CursoAcademicoActual.java) | Consumo directo de la API con `HttpClient` y un JWT de Google. |
+| [Presentación pública](https://somos.iesjandula.es/experiencia?seccion=recursos) | Contexto, proyectos, proceso y descarga de los materiales. |
+
+## Kit REA para otros centros
+
+El directorio [`rea/somos-jandula`](rea/somos-jandula/README.md) conserva la versión publicable y las fuentes editables del kit. Los materiales explican cómo partir de una necesidad real, formular una tarea comprobable, acompañar la revisión y conservar evidencias útiles para la evaluación y la continuidad del proyecto.
+
+El kit se publica bajo **CC BY-SA 4.0** e incluye una guía de aplicación, una rúbrica de observación basada en las cinco áreas de DigComp 2.2, una plantilla de tarea y revisión y un ejemplo cumplimentado y anonimizado. La rúbrica se creó después del curso 2025-2026 y no se utilizó para calcular sus calificaciones.
+
+---
+
+## Integración técnica con un JWT de Google
 
 Este repositorio contiene dos ejemplos mínimos para consumir Reaktor sin usar librerías propias de la arquitectura:
 
@@ -21,7 +42,7 @@ sequenceDiagram
     Reaktor-->>Cliente: Curso académico actual
 ```
 
-## El contrato HTTP del ejemplo
+### El contrato HTTP del ejemplo
 
 Los dos clientes consultan el mismo recurso:
 
@@ -46,7 +67,7 @@ La respuesta es una lista de constantes. En este caso contiene un único element
 
 El curso se obtiene del campo `valor`.
 
-## Ejemplo 1: frontend con login de Google
+### Ejemplo 1: frontend con login de Google
 
 El directorio [`Front`](Front) contiene el recorrido completo:
 
@@ -55,13 +76,13 @@ El directorio [`Front`](Front) contiene el recorrido completo:
 3. Envía el JWT a Reaktor en la cabecera `Authorization`.
 4. Muestra el curso académico que devuelve el microservicio.
 
-### Requisitos
+#### Requisitos
 
 - Node.js 20.10 o posterior.
 - Acceso a la configuración web del proyecto Firebase en el que confía Reaktor.
 - Tu origen local autorizado tanto en Firebase Authentication como en la configuración CORS de Reaktor.
 
-### Puesta en marcha
+#### Puesta en marcha
 
 ```powershell
 cd Front
@@ -84,7 +105,7 @@ El ejemplo está concentrado en tres archivos:
 
 El JWT no se imprime, no se guarda en `localStorage` y no se incluye en el repositorio.
 
-### Comprobaciones del frontend
+#### Comprobaciones del frontend
 
 ```powershell
 npm run lint
@@ -94,13 +115,13 @@ npm run build
 
 Vite separa Vue y Firebase en bundles independientes. Como el ejemplo solo tiene una pantalla, no necesita router, carga diferida de vistas ni compatibilidad `legacy`.
 
-## Ejemplo 2: aplicación Java pura
+### Ejemplo 2: aplicación Java pura
 
 [`Java/CursoAcademicoActual.java`](Java/CursoAcademicoActual.java) contiene el mismo consumo HTTP usando únicamente `java.net.http.HttpClient`. No necesita Maven, Spring ni ninguna librería de Reaktor.
 
 Este ejemplo se centra en la llamada a la arquitectura y, por tanto, recibe un JWT de Google obtenido previamente tras autenticar al usuario.
 
-### Requisitos y ejecución
+#### Requisitos y ejecución
 
 - JDK 17 o posterior.
 - Un JWT de Google válido para el proyecto Firebase admitido por Reaktor.
@@ -129,14 +150,14 @@ Curso académico actual: 2025-2026
 
 El endpoint y los filtros ya tienen los valores del ejemplo. Si se necesita otro entorno, pueden sobrescribirse mediante `REAKTOR_API_URL`, `REAKTOR_PROYECTO` y `REAKTOR_CLAVE`.
 
-## Problemas frecuentes
+### Problemas frecuentes
 
 - **El login funciona, pero Reaktor responde 403:** normalmente el frontend está usando un proyecto Firebase distinto del proyecto en el que confía el backend, o la cuenta no tiene acceso al recurso.
 - **El navegador muestra un error CORS:** el origen local debe estar incluido en la lista de orígenes admitidos por Reaktor. Este control solo afecta al navegador, no al cliente Java.
 - **Google bloquea el popup o el dominio:** añade el dominio desde el que se sirve el frontend a los dominios autorizados de Firebase Authentication.
 - **No aparece la constante:** comprueba que las cabeceras sean exactamente `proyecto: admin` y `clave: admin.cursoAcademicoActual`.
 
-## Seguridad
+### Seguridad
 
 - No confirmes nunca `Front/.env` ni un JWT real en Git.
 - No registres el JWT en consola o ficheros de log.

@@ -1,0 +1,14 @@
+Kit REA Somos Jándula
+
+Autor: Francisco Manuel Benítez Chico
+Centro: IES Jándula
+Versión: 1.0
+Fecha: Septiembre de 2026
+
+Salvo indicación expresa en contrario, el texto, las tablas y las plantillas originales de este paquete se publican bajo la licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0).
+
+Usted puede compartir y adaptar el material, incluso con fines comerciales, siempre que reconozca adecuadamente la autoría, proporcione un enlace a la licencia, indique si se realizaron cambios y distribuya sus contribuciones bajo la misma licencia.
+
+Licencia: https://creativecommons.org/licenses/by-sa/4.0/deed.es
+
+La licencia cubre los materiales educativos originales de este paquete. El código, las marcas, las capturas y los recursos enlazados conservan las condiciones establecidas por sus respectivos titulares.
