@@ -8,6 +8,7 @@ Material abierto para trasladar a otros centros una experiencia de aprendizaje b
 - **Fecha:** septiembre de 2026
 - **Licencia:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es)
 - **Presentación pública:** [somos.iesjandula.es/experiencia](https://somos.iesjandula.es/experiencia?seccion=recursos)
+- **REA publicado en Procomún:** [consultar el recurso](https://procomun.intef.es/ode/view/es_2026090712_9110131)
 
 ## Materiales
 
@@ -39,6 +40,7 @@ El ejemplo DOM_248 utiliza un nombre de equipo genérico y se presenta con final
 - Vuorikari, R., Kluzer, S. y Punie, Y. (2022). [DigComp 2.2: The Digital Competence Framework for Citizens](https://publications.jrc.ec.europa.eu/repository/handle/JRC128415). Joint Research Centre, JRC128415.
 - [Creative Commons Atribución-CompartirIgual 4.0 Internacional](https://creativecommons.org/licenses/by-sa/4.0/deed.es).
 - [Página pública de Somos Jándula](https://somos.iesjandula.es/experiencia).
+- [Kit REA Somos Jándula en Procomún](https://procomun.intef.es/ode/view/es_2026090712_9110131).
 - [Tablero público de seguimiento](https://sharing.clickup.com/2503283/b/h/4-90121296946-2/79af6313b7ad7dc).
 
 ## Licencia y atribución
