@@ -7,6 +7,7 @@ Este repositorio reúne materiales para comprender Reaktor desde dos perspectiva
 | Contenido | Finalidad |
 |---|---|
 | [Kit REA Somos Jándula](rea/somos-jandula/README.md) | Guía, rúbrica DigComp 2.2, plantilla y ejemplo para adaptar la experiencia en otros centros. |
+| [REA en Procomún](http://procomun.intef.es/ode/view/es_2026091812_9225202) | Consultar la publicación actualizada del kit Somos Jándula. |
 | [Ejemplo frontend](Front) | Inicio de sesión con Google/Firebase y consulta de un servicio de Reaktor. |
 | [Ejemplo Java](Java/CursoAcademicoActual.java) | Consumo directo de la API con `HttpClient` y un JWT de Google. |
 | [Presentación pública](https://somos.iesjandula.es/experiencia?seccion=recursos) | Contexto, proyectos, proceso y descarga de los materiales. |
